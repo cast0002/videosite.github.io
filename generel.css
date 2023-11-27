@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+header a {
+    text-decoration: none;
+    color: white;
+}
+h1,
+h2,
+p {
+    color: white;
+}
+main {
+    display: flex;
+    height: auto;
+    max-width: 960px;
+    width: 100%;
+    padding: 20px;
+}
+
+video,
+iframe {
+    width: 48%;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+}
+
+iframe {
+    border: 0;
+}
+#youtube-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+}
+
+#youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Create a 2-column grid */
+    gap: 10px;
+    /* Adjust the gap between images */
+  
+}
+
+.img_1,
+.img_2,
+.img_3,
+.img_4 {
+    width: 100%;
+    /* Make images fill their grid cells */
+    height: auto;
+    /* Maintain the aspect ratio */
+    display: block;
+    /* Remove any default inline styling */
+}
+
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        /* Center items in the column */
+    }
+
+    video,
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+        
+        }
